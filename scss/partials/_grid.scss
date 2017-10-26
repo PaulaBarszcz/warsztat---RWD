@@ -1,0 +1,51 @@
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid red;
+
+    .row {
+        width: 100%;
+        &.left {
+            margin: 5px 0;
+            padding: 5px 0;
+        }
+        &:before,
+        &:after {
+            clear: both;
+            display: block;
+            content: '';
+        }
+
+        [class*="col-"]{
+            float: left;
+            min-height: 1px;
+            width: $singleColumnWidth;
+            padding: 10px;
+            
+        }
+
+
+        @for $i from 1 through $columns {
+            .col-sm-#{$i} {
+                width: ($singleColumnWidth * $i);
+            }
+        }
+
+        @media (min-width: 500px){
+            @for $i from 1 through $columns {
+                .col-md-#{$i} {
+                    width: ($singleColumnWidth * $i);
+                }
+            }
+        }
+
+        @media (min-width: 760px) {
+            @for $i from 1 through $columns {
+                .col-lg-#{$i} {
+                    width: ($singleColumnWidth * $i);
+                }
+            }
+        }
+    }
+}

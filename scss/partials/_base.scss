@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #1c1a1a;
+    color: white;
+    font-family: sans-serif;
+    max-height: 90px;
+    .burger {
+        height: 19px;
+        width: 30px;
+        background-color: white;
+        float: right;
+        margin: 30px 5px;
+        position: relative;
+        border-top: 8px solid #1c1a1a;
+        border-bottom: 8px solid #1c1a1a;
+        @media (min-width: 500px) {
+            display: none;
+        }
+        &:before {
+            position: absolute;
+            content: '';
+            right: 0;
+            top: 10px;
+            height: 3px;
+            width: 30px;
+            background-color: white;
+        }
+        &:after {
+            position: absolute;
+            content: '';
+            right: 0;
+            top: -10px;
+            height: 3px;
+            width: 30px;
+            background-color: white;
+        }
+    }
+    .header-logo {
+        line-height: 70px;
+        font-size: 27px;
+    }
+    nav {
+        display: none;
+        @media (min-width: 500px) {
+            display: block;
+        }
+
+        ul {
+            display: block;
+            text-align: right;
+            padding: 10px 40px 0 0;
+            @media (min-width: 500px) {
+                padding-right: 0;
+            }
+            li{
+                list-style-type: none;
+                display: inline-block;
+                font-size: 22px;
+                padding: 0 4px;
+            }
+        }
+    }
+}
+
+.active {
+    position: relative;  
+}
+
+.active_ul {
+    position: absolute;
+    top: 47px;
+    right: -2%; 
+    background-color: #1c1a1a;
+    padding: 3px 3px;
+    text-align: center;
+}
+
+.active_li {
+    display: block;
+    padding: 4px 4px;
+    font-size: 22px;
+}
+
+.main-content-left,
+.main-content-right {
+    margin: 10px 0;
+    height: 250px;
+}
+
+.col-sm-12.col-md-6 .main-content-left {
+    border-right: 0;
+    background-color: #1c1a1a;  
+}
+
+.col-sm-12.col-md-6 .main-content-right {
+    border-left: 0;
+    padding: 5px 20px;
+    margin: 0;
+    color: #1c1a1a;
+    overflow: auto;
+    h1 {
+        margin: 0;
+    }
+}
+
+.content {
+    background-color: #1c1a1a;
+    color: white;
+    .content-left,
+    .content-center,
+    .content-right {
+        background-color: #fff;
+        display: block;
+        height: 280px;
+        margin: 1px solid red;
+    }
+}
+
+footer {
+    .footer-copy {
+        display: block;
+        float: left;
+        line-height: 30px;
+    }
+    .footer-logo {
+        display: block;
+        float: right;
+        text-align: right;
+        line-height: 30px;
+    }
+}
+
+.header {
+    background: #1c1a1a;
+}
+
+content {
+    background: #1c1a1a;
+}
