@@ -5,7 +5,7 @@ var sourcemaps = require('gulp-sourcemaps');
 gulp.task('compilescss', function() {
     return gulp.src('scss/**/*.scss')
         .pipe(sourcemaps.init())
-        .pipe(functionSass({outputStyle:'nested'}))
+        .pipe(functionSass({outputStyle:'expanded'}))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('css'))
 })
