@@ -4,7 +4,7 @@
  
 ### Responsive page created using grid. 
 ### HTML5, CSS3, JavaScript and Gulp (with watchscss and gulp-sourcemaps) were used.
-### Website made during "JavaScript: developer" programming bootcamp at Coders Lab.
+### Website made during "JavaScript Developer: React" programming bootcamp at Coders Lab.
 
 
 
